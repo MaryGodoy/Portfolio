@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Roboto+Slab&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato italico", sans-serif;
+}
+body {
+  background: rgb(177, 232, 255);
+  background: radial-gradient(
+    circle,
+    rgba(177, 232, 255, 1) 0%,
+    rgba(71, 122, 187, 1) 100%
+  );
+}
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+header::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../Img/header.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+header .foto {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+header .titulo {
+  text-align: center;
+}
+.informacao {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.informacao p {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0.5rem;
+  font-size: 1.2rem;
+}
+.informacao p::before {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+}
+.informacao .job::before {
+background-image: url('../Img/job.svg');
+}
+.informacao .localidade::before{
+    background-image: url('../Img/location.svg');
+}
+.informacao .email::before{
+    background-image: url('../Img/email.svg');
+}
+.informacao .fone::before{
+    background-image: url('../Img/phone.svg');
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+.janela{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 1rem;
+    border: 1px solid #fff;
+    border-radius: 1rem;
+    transition: 0.25s;
+}
+.janela.open,
+.janela:hover{
+    background-color: #c9e9ff;
+    border-color: rgb(0, 0, 0);
+}
+.janela .abrir{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+}
+.janela .abrir h2{
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: start;
+}
+.janela .abrir:hover{
+    cursor: pointer;
+}
